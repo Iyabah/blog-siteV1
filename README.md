@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Blog Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Overview
 
-## Available Scripts
+This is a full-stack blog application built with **React (Frontend)** and **Node.js with MySQL (Backend)**. It allows users to view, create, and manage blog posts.
 
-In the project directory, you can run:
+## 🛠️ Tech Stack
 
-### `npm start`
+### Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** (with React Router)
+- **Bootstrap** (for styling)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
 
-### `npm test`
+- **Node.js** (Express.js for server-side logic)
+- **MySQL** (Database, using Knex.js for migrations)
+- **XAMPP** (for local MySQL database management)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Features
 
-### `npm run build`
+- View all blog posts on the homepage.
+- Click a post to view full details.
+- Backend API to handle posts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Folder Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+/blog-site
+│── backend       # Node.js + Express API
+│   ├── migrations # Knex migrations for MySQL
+│   ├── models     # Database models
+│   ├── routes     # API routes
+│   ├── server.js  # Express server setup
+│
+│── frontend      # React application
+│   ├── src
+│   │   ├── components  # Reusable UI components
+│   │   ├── pages       # Home, PostPage, etc.
+│   │   ├── App.js      # Main React component
+│   │   ├── index.js    # Entry point
+│   │   ├── styles      # CSS files
+│
+│── README.md     # Documentation
+│── package.json  # Dependencies
+│── .gitignore    # Git ignore file
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 Setup & Installation
 
-### `npm run eject`
+### 1️⃣ Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+git clone https://github.com/yourusername/blog-site.git
+cd blog-site
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2️⃣ Backend Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+cd backend
+npm install
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Ensure **XAMPP is running** (Apache & MySQL).
+- Update `` with database credentials.
+- Run migrations:
+  ```sh
+  npx knex migrate:latest
+  ```
 
-## Learn More
+### 3️⃣ Frontend Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+cd ../frontend
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚡ API Endpoints
 
-### Code Splitting
+### 📌 Fetch All Posts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+GET /api/posts
+```
 
-### Analyzing the Bundle Size
+### 📌 Fetch a Single Post
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+GET /api/posts/:id
+```
 
-### Making a Progressive Web App
+## 🛠️ Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If `npm start` fails in the frontend, try:
 
-### Advanced Configuration
+```sh
+rm -rf node_modules package-lock.json
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📜 License
 
-### Deployment
+MIT License. Free to use and modify!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+🚀 **Happy Coding!** 🎉
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
