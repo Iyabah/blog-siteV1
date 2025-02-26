@@ -1,0 +1,243 @@
+/* Home.css */
+
+.home-featured-posts {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .post-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .post-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .post-content {
+    padding: 1.25rem;
+  }
+  
+  .post-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .post-excerpt {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  
+  .read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .read-more:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .see-all-posts {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .home-hero {
+    background-color: #f3f4f6;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .hero-description {
+    max-width: 36rem;
+    margin: 0 auto;
+    color: #6b7280;
+  }
+  .display-4 {
+    /* Custom font size */
+    font-size: 3.5rem;
+    
+    /* Add a custom color */
+    color: #000000;
+    
+    /* Add text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    
+    /* Add animation on page load */
+    animation: fadeIn 1s ease-in;
+  }
+  
+  /* Optional animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* You can also override Bootstrap's default styles */
+  .fw-bold {
+    font-weight: 700 !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Add a hover effect */
+  .display-4:hover {
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+    .homepage-container {
+      min-height: 100vh;
+      background-color: #f8f9fa;
+  }
+  
+  .title-animation {
+      animation: fadeInDown 1s ease-out;
+      color: #2c3e50;
+  }
+  
+  .post-card {
+      transition: transform 0.3s ease;
+  }
+  
+  .hover-effect:hover {
+      transform: translateY(-5px);
+  }
+  
+  .card {
+      border: none;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: white;
+      height: 100%;
+  }
+  
+  .card-body {
+      padding: 1.5rem;
+  }
+  
+  .card-title {
+      color: #2c3e50;
+      font-weight: 600;
+  }
+  
+  .read-more {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+  }
+  
+  .read-more:hover {
+      transform: translateX(5px);
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInDown {
+      from {
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .card-body {
+          padding: 1rem;
+      }
+      
+      .display-4 {
+          font-size: 2.5rem;
+      }
+  }
+  
+  /* Add loading animation for posts */
+  @keyframes cardLoading {
+      0% {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  .post-card {
+      animation: cardLoading 0.6s ease-out forwards;
+      animation-delay: calc(var(--card-index) * 0.1s);
+  }

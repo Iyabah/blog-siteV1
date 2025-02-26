@@ -1,0 +1,20 @@
+.signin-container {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.signin-container .card {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.signin-container .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}

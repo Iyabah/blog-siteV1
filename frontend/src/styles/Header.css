@@ -1,0 +1,80 @@
+.bg-primary {
+    background-color: #2563eb !important; /* This matches Tailwind's blue-600 */
+}
+
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.h4 a {
+    color: white !important;
+    transition: color 0.3s ease;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+}
+
+
+.h4 a:hover {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none;
+}
+header h1 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Add hover effect on the title */
+header h1:hover {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease;
+}
+.nav-link {
+  color: white !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  background-color: #2563eb; /* Same blue as header */
+}
+
+.nav-link:hover {
+  background-color: #1d4ed8; /* Slightly darker blue on hover */
+  color: rgba(255, 255, 255, 0.9) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background-color: #1d4ed8;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+main {
+  padding-bottom : 60px
+}.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.bar.open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
